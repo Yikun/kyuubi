@@ -46,7 +46,7 @@ matrix:
         - EXCLUDE_TAGS="org.apache.kyuubi.tags.DataLakeTest"
     - name: Test Kyuubi w/ -Pspark-3.2-snapshot w/ Spark 3.2 nightly build
       env:
-        - PROFILE="-Pspark-3.2-snapshot -pl :kyuubi-spark-sql-engine"
+        - PROFILE="-Pspark-3.2-snapshot -pl :kyuubi-spark-sql-engine,:kyuubi-common,:kyuubi-ha"
         - EXCLUDE_TAGS="org.apache.kyuubi.tags.DataLakeTest"
 
 install:
