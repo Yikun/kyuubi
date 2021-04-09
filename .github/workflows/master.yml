@@ -33,7 +33,7 @@ jobs:
     strategy:
       matrix:
         profiles:
-          - '-Pspark-3.2-snapshot -pl :kyuubi-spark-sql-engine,:kyuubi-common,:kyuubi-ha -Dmaven.plugin.scalatest.exclude.tags=org.apache.kyuubi.tags.DataLakeTest'
+          - '-Pspark-3.2-snapshot -pl :kyuubi-spark-sql-engine,:kyuubi-common,:kyuubi-ha,:kyuubi-zookeeper -Dmaven.plugin.scalatest.exclude.tags=org.apache.kyuubi.tags.DataLakeTest'
     steps:
       - uses: actions/checkout@v2
       - name: Setup JDK 1.8
